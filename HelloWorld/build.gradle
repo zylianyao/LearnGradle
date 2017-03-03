@@ -1,0 +1,28 @@
+task helloworld {
+    doLast{
+        print 'Hello world!'
+    }
+}
+
+task helloworldSort << {
+    print 'Hello world!'
+}
+
+task startSession << {
+    chant()
+}
+
+def chant() {
+    ant.echo(message:'Ant 任务的引用')
+}
+
+3.times {
+    task "yayGradle$it" << {
+        println '动态任务的定义$it'
+    }
+}
+
+yayGradle0.dependsOn startSession
+yayGradle2.dependsOn yayGradle1,yayGradle0
+
+task groupTherapy(dependsOn:yayGradle2)
