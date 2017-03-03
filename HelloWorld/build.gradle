@@ -28,7 +28,7 @@ def chant() {
 /* dependsOn 说明 task 之间的依赖关系，Gradle 会确保被依赖的 task 总会在定义该依赖的 task 之前执行 */
 yayGradle0.dependsOn startSession
 yayGradle2.dependsOn yayGradle1, yayGradle0
-/* 任务执行的顺序 startSession yayGradle0 yayGradle1 yayGradle2 groupTherapy */
+/* 任务执行的顺序 startSession -> yayGradle0 -> yayGradle1 -> yayGradle2 -> groupTherapy */
 task groupTherapy(dependsOn: yayGradle2) << {
     println 'groupTherapy'
 }
