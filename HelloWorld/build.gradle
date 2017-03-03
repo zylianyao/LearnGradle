@@ -1,5 +1,5 @@
 task helloworld {
-    doLast{
+    doLast {
         print 'Hello world!'
     }
 }
@@ -13,7 +13,8 @@ task startSession << {
 }
 
 def chant() {
-    ant.echo(message:'Ant 任务的引用')
+    //没有效果，具体原因未找到
+    ant.echo(message: 'Ant 任务的引用')
 }
 
 3.times {
@@ -22,7 +23,8 @@ def chant() {
     }
 }
 
+// dependsOn 说明 task 之间的依赖关系，Gradle 会确保被依赖的 task 总会在定义该依赖的 task 之前执行
 yayGradle0.dependsOn startSession
-yayGradle2.dependsOn yayGradle1,yayGradle0
+yayGradle2.dependsOn yayGradle1, yayGradle0
 
-task groupTherapy(dependsOn:yayGradle2)
+task groupTherapy(dependsOn: yayGradle2)

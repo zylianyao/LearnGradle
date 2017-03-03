@@ -63,3 +63,5 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+*.iml
+.idea/**
