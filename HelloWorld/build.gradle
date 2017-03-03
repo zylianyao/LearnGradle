@@ -3,25 +3,30 @@ task helloworld {
         print 'Hello world!'
     }
 }
-
+//The Task.leftShift(Closure) method has been deprecated and is scheduled to be removed in Gradle 5.0. Please use Task.doLast(Action) instead.
 task helloworldSort << {
     print 'Hello world!'
 }
 
-task startSession << {
-    println 'startSession'
-    chant()
+task startSession {
+    doLast {
+        println 'startSession'
+        chant()
+    }
 }
 
 def chant() {
-    /*没有效果，具体原因未找到 */
+    /*使用 gradle -q task名称 的方式运行会没有效果
+    * 使用 gradle task名称 的方式运行才有效果*/
     ant.echo(message: 'Ant 任务的引用')
     println 'chant'
 }
 
 3.times {
-    task "yayGradle$it" << {
-        println '动态任务的定义' + it
+    task "yayGradle$it" {
+        doLast {
+            println '动态任务的定义' + it
+        }
     }
 }
 
@@ -29,6 +34,8 @@ def chant() {
 yayGradle0.dependsOn startSession
 yayGradle2.dependsOn yayGradle1, yayGradle0
 /* 任务执行的顺序 startSession -> yayGradle0 -> yayGradle1 -> yayGradle2 -> groupTherapy */
-task groupTherapy(dependsOn: yayGradle2) << {
-    println 'groupTherapy'
+task groupTherapy(dependsOn: yayGradle2) {
+    doLast {
+        println 'groupTherapy'
+    }
 }
