@@ -181,7 +181,7 @@ Please make a choice:
 www.coderknock.com$ java -jar Project.jar
 Project.jar中没有主清单属性
 ```
-我们发现没有正确运行，下这是因为，我们没有在构建脚本中申明要生成清单文件MANIFEST.MF 下面我们来修改一下相关的配置。
+我们发现没有正确运行，下这是因为，我们没有在构建脚本中申明要生成清单文件MANIFEST.MF 下面我们来修改一下 build.gradle  相关的配置。
 ```groovy
 //使用 Java 插件
 //默认在 src/main/java下查找源代码
