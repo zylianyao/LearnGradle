@@ -13,3 +13,23 @@ jar {
         attributes 'Main-Class': 'com.manning.gia.todo.ToDoApp'
     }
 }
+//改变项目默认结构
+sourceSets {
+
+    //设置源代码所在目录
+    main {
+        java {
+            srcDirs = ['src']
+        }
+    }
+
+    //设置测试代码所在目录
+    test {
+        java {
+            srcDirs = ['test']
+        }
+    }
+}
+
+//改变编译目录
+buildDir = 'out'
