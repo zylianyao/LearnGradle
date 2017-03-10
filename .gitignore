@@ -66,3 +66,4 @@ $RECYCLE.BIN/
 *.iml
 .idea/**
 .idea/
+**/out/
