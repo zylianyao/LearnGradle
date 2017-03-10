@@ -33,3 +33,25 @@ sourceSets {
 
 //改变编译目录
 buildDir = 'out'
+
+//定义仓库，此处使用的是 Maven 的仓库
+//可以在 http://mvnrepository.com/ 或者 http://search.maven.org 【可能需要翻墙】 来查询相关依赖
+repositories {
+    mavenCentral()
+}
+
+/**
+ 定义依赖相当于maven中的
+ <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+ <dependencies>
+     <dependency>
+         <groupId>org.apache.commons</groupId>
+         <artifactId>commons-lang3</artifactId>
+         <version>3.5</version>
+     </dependency>
+ </dependencies>
+ */
+dependencies {
+    //group对应 groupId name 对应 artifactId  compile指定的是依赖使用的范围
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.5'
+}
