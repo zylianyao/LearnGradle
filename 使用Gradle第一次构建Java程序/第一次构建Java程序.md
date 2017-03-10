@@ -213,3 +213,5 @@ Please make a choice:
 (e)xit
 ```
 可以看到，jar 包可以正常运行。
+
+**[相关代码](https://github.com/zylianyao/LearnGradle/tree/master/%E4%BD%BF%E7%94%A8Gradle%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%9E%84%E5%BB%BAJava%E7%A8%8B%E5%BA%8F)**
