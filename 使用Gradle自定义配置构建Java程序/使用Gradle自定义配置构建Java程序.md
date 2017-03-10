@@ -206,3 +206,4 @@ Total time: 40.259 secs
 ```
 
 此时就可以正常编译及运行程序了。
+[相关代码](https://github.com/zylianyao/LearnGradle/tree/master/%E4%BD%BF%E7%94%A8Gradle%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE%E6%9E%84%E5%BB%BAJava%E7%A8%8B%E5%BA%8F)
