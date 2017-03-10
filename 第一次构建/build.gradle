@@ -1,0 +1,35 @@
+//使用 Java 插件
+//默认在 src/main/java下查找源代码
+apply plugin: 'java'
+//定义项目的版本
+version = 0.1
+//设置 Java 兼容版本
+sourceCompatibility = 1.8
+//jar 包相关配置
+jar {
+    //清单文件配置
+    manifest {
+        //启动类
+        attributes 'Main-Class': 'com.manning.gia.todo.ToDoApp'
+    }
+}
+//改变项目默认结构
+sourceSets {
+
+    //设置源代码所在目录
+    main {
+        java {
+            srcDirs = ['src']
+        }
+    }
+
+    //设置测试代码所在目录
+    test {
+        java {
+            srcDirs = ['test']
+        }
+    }
+}
+
+//改变编译目录
+buildDir = 'out'
