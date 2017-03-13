@@ -47,6 +47,7 @@ jettyRun {
     contextPath = 'coderknockJetty'
 }
 ```
+###Gretty 插件
 通过上面的编译输出我们可以看到 Jetty 插件在 Gradle 4.0 中将会被删除，推荐使用 [Gretty 插件](http://akhikhl.github.io/gretty-doc/Getting-started.html)，我们再次修改项目 build.gradle 将 `apply plugin:'jetty'` 更改为 `apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'`并删除或注释掉`jettyRun相关配置`，然后运行项目【需要联网下载相关依赖】：
 ```bash
  www.coderknock.com$ gradle appRun
@@ -72,4 +73,4 @@ Gretty 自定义配置与 Jetty 大致相同：
         contextPath = 'coderknock'
     }
 ```
-
+[相关代码](https://github.com/zylianyao/LearnGradle/tree/master/%E4%BD%BF%E7%94%A8Gradle%E5%9C%A8%E5%B5%8C%E5%85%A5%E5%BC%8FWeb%E5%AE%B9%E5%99%A8Jetty%E4%B8%AD%E8%BF%90%E8%A1%8CWeb%E5%BA%94%E7%94%A8/project)
