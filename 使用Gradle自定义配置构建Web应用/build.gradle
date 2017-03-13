@@ -1,0 +1,32 @@
+apply plugin: 'war'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+    runtime 'javax.servlet:jstl:1.2'
+}
+
+//设置编码
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+//改变项目默认结构
+sourceSets {
+
+    //设置源代码所在目录
+    main {
+        java {
+            srcDirs = ['src']
+        }
+    }
+
+    //设置测试代码所在目录
+    test {
+        java {
+            srcDirs = ['test']
+        }
+    }
+}
+
