@@ -1,0 +1,23 @@
+apply plugin: 'war'
+//apply plugin: 'jetty'
+apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+    runtime 'javax.servlet:jstl:1.2'
+}
+// jetty 自定义配置
+//jettyRun {
+//    httpPort = 9091
+//    contextPath = 'coderknockJetty'
+//}
+
+//gretty 配置 更详细的文档可以查看 http://akhikhl.github.io/gretty-doc/
+    gretty {
+        httpPort = 9090
+        contextPath = 'coderknock'
+    }
+
