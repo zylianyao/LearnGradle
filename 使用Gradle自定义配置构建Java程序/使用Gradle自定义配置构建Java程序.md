@@ -44,7 +44,7 @@ buildDir = 'out'
 
 我们将源代码从默认配置的路径转移到 src 下，然后进行编译（gradle build）
 
-```shell
+```bash
 │  build.gradle
 │  使用Gradle自定义配置构建Java程序.md
 │
@@ -124,7 +124,7 @@ buildDir = 'out'
 
 很显然，我们引入了第三方库，需要告知 Gradle 否则编译是不能通过的，会被以下错误：
 
-```shell
+```bash
 www.coderknock.com$ gradle build
 :compileJava
 D:\Windows\Desktop\LearnGradle\使用Gradle自定义配置构建Java程序\src\com\manning\gia\todo\ToDoApp.java:5: 错误: 程序包org.apache.commons.lang3不存在

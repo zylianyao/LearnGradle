@@ -100,7 +100,7 @@ Total time: 1.29 secs
 
 ### 任务执行
 
-```shell
+```bash
 www.coderknock.com$ gradle yayGradle0 groupTherapy
 :startSession
 startSession
@@ -120,7 +120,7 @@ BUILD SUCCESSFUL
 Total time: 1.61 secs
 ```
 
-```shell
+```bash
 www.coderknock.com$ gradle groupTherapy
 :startSession
 startSession
@@ -141,7 +141,7 @@ Total time: 1.614 secs
 ```
 我们可以看到 `gradle yayGradle0 groupTherapy`与`gradle groupTherapy`两者的运行结果是相同的，这是因为 `groupTherapy`与`yayGradle0`直接有依赖关系，这样可以保证被依赖的任务只执行一次，并且任务间的执行顺序按照依赖关系进行。
 
-```shell
+```bash
 www.coderknock.com$ gradle gT
 :startSession
 startSession
@@ -161,7 +161,7 @@ BUILD SUCCESSFUL
 Total time: 1.43 secs
 ```
 Gradle 提供了以驼峰式缩写在命令行上运行命令的方式，我们可以通过如上面一样的`gradle gT`这样的命令来达到`gradle groupTherapy`这样的效果。其中要确保任务名字的缩写是唯一的不然会有如下报错效果：
-```shell
+```bash
 www.coderknock.com$ gradle yG
 
 FAILURE: Build failed with an exception.
@@ -177,7 +177,7 @@ BUILD FAILED
 Total time: 1.296 secs
 ```
 我们应该使用`yG0`来代替`yayGradle0`
-```shell
+```bash
 www.coderknock.com$ gradle groupTherapy -x yG0
 :yayGradle1
 动态任务的定义task ':yayGradle1'
@@ -193,7 +193,7 @@ Total time: 1.378 secs
 使用`-x`参数，我们可以智能排除任务中对应的依赖任务及其相关依赖
 
 使用`gradle -h`我们可以查询`gradle可用参数`
-```shell
+```bash
 www.coderknock.com$ gradle -h
 
 USAGE: gradle [option...] [task...]

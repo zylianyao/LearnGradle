@@ -28,7 +28,7 @@
 apply plugin: 'java'
 ```
 ###执行构建命令
-```shell
+```bash
 www.coderknock.com$ gradle build
 Starting a Gradle Daemon, 1 incompatible and 1 stopped Daemons could not be reused, use --status for details
 //编译 Java 代码
@@ -56,7 +56,7 @@ Total time: 13.767 secs
 每一行都是 Java 插件提供的一个可执行任务，`UP-TO-DATE` 代表任务被跳过。
 
 ###编译之后
-```
+```bash
 │  build.gradle
 │
 ├─.gradle
@@ -128,7 +128,7 @@ Total time: 13.767 secs
                                     CommandLineInputHandler.java
 ```
 ###运行项目
-```shell
+```bash
 www.coderknock.com$ java -cp build/classes/main/  com.manning.gia.todo.ToDoApp
 
 --- To Do Application ---
@@ -177,7 +177,7 @@ Please make a choice:
 > e
 ```
 再来运行下 jar 
-```shell
+```bash
 www.coderknock.com$ java -jar Project.jar
 Project.jar中没有主清单属性
 ```
@@ -200,7 +200,7 @@ jar {
 }
 ```
 再次编译完成后，build/lib 目录下的 jar 包名为 Project-0.1.jar
-```shell
+```bash
 www.coderknock.com$ java -jar Project-0.1.jar
 
 --- To Do Application ---
