@@ -63,5 +63,6 @@ War 插件默认使用 GBK 编码做为代码编码。当我们的代码中有�
      from 'static'
  }
 ```
-这样我们的项目就可以正常编译并打包为可用 WAR 文件。
+这样我们的项目就可以正常编译并打包为可用 WAR 文件。 【编译结果与[使用Gradle第一次构建Web应用](https://coderknock.com/blog/2017/03/13/%E4%BD%BF%E7%94%A8Gradle%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%9E%84%E5%BB%BAWeb%E5%BA%94%E7%94%A8.html)相同】
+[相关代码](https://coderknock.com/blog/2017/03/13/%E4%BD%BF%E7%94%A8Gradle%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%9E%84%E5%BB%BAWeb%E5%BA%94%E7%94%A8.html)
 
