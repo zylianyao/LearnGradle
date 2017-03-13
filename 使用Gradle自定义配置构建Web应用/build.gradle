@@ -18,15 +18,23 @@ sourceSets {
     //设置源代码所在目录
     main {
         java {
-            srcDirs = ['src']
+            srcDirs = ['srcdiv']
         }
     }
 
     //设置测试代码所在目录
     test {
         java {
-            srcDirs = ['test']
+            srcDirs = ['testdiv']
         }
     }
+}
+
+//改变 Web 应用的源代码目录
+webAppDirName = 'webfiles'
+
+//将静态文件放到 static 路径，但是需要打包到 WAR 文件根目录下
+war {
+    from 'static'
 }
 
