@@ -11,7 +11,7 @@ Gradle 包装器是 Gradle 的核心特性，能够让机器在没有安装 Grad
 How
 ----
 ####配置包装器
-1、创建一个包装器任务
+1、创建一个包装器任务【此步骤也可跳过，Gradle会提供一个默认的 wrapper 任务，gradleVersion为当前机器上的版本】  
 在 build.gradle 中添加以下代码：
 ```groovy
 task wrapper(type:Wrapper){
