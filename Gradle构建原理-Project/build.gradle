@@ -1,0 +1,21 @@
+setDescription("project 描述")//在不显式使用 project 变量的情况下设置项目描述
+println "项目 $name 的描述："+description
+project.ext.prop1 = "foo"
+ext{
+    prop2="test"
+}
+task doStuff {
+    ext.prop3 = "bar"
+}
+
+ext.prop5=23
+
+println prop1
+println prop2
+
+//println prop3 //这样调用会报错 Could not get unknown property 'prop3' for root project 'Gradle构建原理' of type org.gradle.api.Project.这也证实了默认使用的是 project 实例
+println doStuff.prop3
+println prop5
+println projectTestPropValue
+println userTestpPopValue
+println rootTestPropValue
